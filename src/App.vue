@@ -5,17 +5,18 @@
     <v-content>
       <router-view />
     </v-content>
+
+    <footer-compo />
   </v-app>
 </template>
 
 <script>
 import HeaderNav from '@/components/HeaderNav.vue';
+import FooterCompo from '@/components/FooterCompo.vue';
 
 export default {
   name: 'App',
-  components: { HeaderNav },
-  data: () => ({
-  }),
+  components: { HeaderNav, FooterCompo },
 };
 </script>
 
