@@ -15,7 +15,7 @@
         </template>
         <v-list>
           <v-list-item v-for="[name, link] in tabs" :key="link" :to="link">
-            <v-list-item-title>{{ name }}</v-list-item-title>
+            <v-list-item-title class="text-uppercase">{{ name }}</v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
