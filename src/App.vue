@@ -24,5 +24,23 @@ export default {
 
 // font
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css); // 'Nanum Gothic'
-* { font-family: 'Nanum Gothic'; }
+* {
+  font-family: 'Nanum Gothic' !important;
+}
+
+div, span, p {
+  &.v-application &.headline, &.title {
+    font-family: 'Nanum Gothic' !important;
+  }
+  &.v-application &.display {
+    &-1, &-2, &-3, &-4 {
+      font-family: 'Nanum Gothic' !important;
+    }
+  }
+}
+
+// hr
+hr {
+  border-color: #707070 !important;
+}
 </style>
