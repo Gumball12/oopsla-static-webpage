@@ -12,7 +12,28 @@ const routes = [
   {
     path: '/news',
     name: 'news',
-    component: () => import('../views/News.vue'),
+    props: { mode: 'news' },
+    component: () => import('../views/MultiArticle.vue'),
+  },
+  {
+    path: '/research',
+    name: 'research',
+    props: { mode: 'research' },
+    component: () => import('../views/MultiArticle.vue'),
+  },
+  {
+    path: '/news/:ind',
+    props: { mode: 'news' },
+    component: () => import('../views/MultiView.vue'),
+  },
+  {
+    path: '/research/:ind',
+    props: { mode: 'research' },
+    component: () => import('../views/MultiView.vue'),
+  },
+  {
+    path: '*',
+    component: () => import('../views/PNF.vue'),
   },
 ];
 
