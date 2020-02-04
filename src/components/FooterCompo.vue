@@ -1,7 +1,7 @@
 <template>
   <v-footer>
     <v-container class="grey--text">
-      <p class="display-1 font-weight-black" v-text="title" />
+      <p class="display-1 font-weight-black mb-0" v-text="title" />
       <p v-text="address" />
       <v-img src="/thumbnail/sch-logo.png" width="80" />
       <p v-text="office" />
