@@ -12,20 +12,52 @@
       </v-img>
     </v-card>
 
-    <v-row class="contents">
+    <v-row class="contents" v-if="mode === 'news'">
       <v-col class="py-8">
         {{ data.contents }}
       </v-col>
     </v-row>
+
+    <template v-else>
+      <v-row v-for="(article, ind) in articles" :key="ind" class="py-8">
+        <v-col sm="12">
+          <p class="title">{{ article[0] }}</p>
+          <p class="overflow-x-auto" v-html="article[1]" />
+          <v-divider />
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col sm="12">
+          <p class="title">Paper</p>
+          <p class="subtitle-1">{{ paper.title }}</p>
+        </v-col>
+        <v-col sm="12">
+          <p class="subtitle-2">Writer</p>
+          <p v-for="(p, ind) in paper.writer" :key="ind" v-text="p" />
+        </v-col>
+        <v-col sm="12">
+          <p class="subtitle-2">Links</p>
+          <p v-for="(link, ind) in paper.links" :key="ind">
+            <a v-if="link[1] !== undefined"
+              :href="link[1]" target="_blank" v-text="link[0]" />
+            <span v-else v-text="link[0]" />
+          </p>
+        </v-col>
+      </v-row>
+    </template>
   </v-container>
 </template>
 
 <script>
+import _ from 'lodash';
+
 export default {
   name: 'multi-view',
   data: () => ({
     ind: 0,
     data: { },
+    articles: [],
+    paper: { },
   }),
   props: ['mode'],
   async mounted() {
@@ -35,6 +67,9 @@ export default {
     if (this.data === undefined) {
       return this.$router.push('/404');
     }
+
+    this.articles = _.toPairs(this.data).slice(3, -1);
+    this.paper = this.data.paper;
 
     return true;
   },
