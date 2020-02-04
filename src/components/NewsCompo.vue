@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card :to="`/news/${newsIndex}`">
     <v-img
       class="white--text align-end"
       :class="{ 'main-card': isMain }"
@@ -23,25 +23,26 @@ export default {
     thumbnail: '',
   }),
   props: ['imgHeight', 'newsIndex', 'isMain'],
+  methods: {
+    async updateNews() {
+      const news = (await this.$yaml).news[this.newsIndex];
+      this.date = news.date;
+      this.title = news.title;
+
+      if (news.thumbnail) {
+        this.thumbnail = news.thumbnail;
+      } else {
+        this.thumbnail = '/thumbnail/default.png';
+      }
+    },
+  },
   async mounted() {
-    const newss = (await this.$yaml).news;
-    let news;
-    if (this.newsIndex !== -1) {
-      // common news
-      news = newss[this.newsIndex];
-    } else {
-      // main news
-      news = newss[newss.length - 1];
-    }
-
-    this.date = news.date;
-    this.title = news.title;
-
-    if (news.thumbnail) {
-      this.thumbnail = news.thumbnail;
-    } else {
-      this.thumbnail = '/thumbnail/default.png';
-    }
+    this.updateNews();
+  },
+  watch: {
+    newsIndex() {
+      this.updateNews();
+    },
   },
 };
 </script>

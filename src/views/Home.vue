@@ -1,10 +1,10 @@
 <template>
   <v-container>
     <!-- main news -->
-    <news-compo :img-height="getMainNewsHeight()" :isMain="true" :newsIndex="-1" />
+    <news-compo :img-height="getMainNewsHeight()" :isMain="true" :newsIndex="lastNewsIndex" />
 
     <!-- news -->
-    <div class="d-flex mt-8">
+    <div class="cursor d-flex mt-8" @click="$router.push('/news')">
       <span class="headline mb-1 grey--text text--darken-1">NEWS</span>
       <v-spacer />
       <span class="align-self-center">+</span>
@@ -30,7 +30,7 @@
     </v-item-group>
 
     <!-- research -->
-    <div class="d-flex mt-8">
+    <div class="cursor d-flex mt-8" @click="$router.push('/research')">
       <span class="headline mb-1 grey--text text--darken-1">RESEARCH</span>
       <v-spacer />
       <span class="align-self-center">+</span>
@@ -68,6 +68,7 @@ export default {
   data: () => ({
     newsIndex: [],
     researchIndex: [],
+    lastNewsIndex: 0,
   }),
   components: {
     NewsCompo,
@@ -84,9 +85,14 @@ export default {
 
     const lastNewsIndex = data.news.length - 1;
     this.newsIndex = _.range(lastNewsIndex, lastNewsIndex - 4);
+    this.lastNewsIndex = lastNewsIndex;
 
     const lastResearchIndex = data.research.length - 1;
     this.researchIndex = _.range(lastResearchIndex, lastResearchIndex - 4);
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.cursor { cursor: pointer; }
+</style>

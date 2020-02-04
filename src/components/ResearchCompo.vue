@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card :to="`/research/${researchIndex}`">
     <v-img
       class="white--text align-end"
       :height="imgHeight"
