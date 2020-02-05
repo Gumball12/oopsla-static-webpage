@@ -23,9 +23,9 @@
         <v-col sm="12">
           <p class="title">{{ article[0] }}</p>
           <p class="overflow-x-auto" v-html="article[1]" />
-          <v-divider />
         </v-col>
       </v-row>
+      <v-divider />
       <v-row>
         <v-col sm="12">
           <p class="title">Paper</p>
