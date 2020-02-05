@@ -50,18 +50,17 @@ research:
     Overall architecture: >
       <img src="http://cvlab.postech.ac.kr/research/MoCap/images/overall_arch.png">
       Figure 1. Overall architecture of the proposed approach. The model first takes multiple video frames as input and convert them into frame-wise appearance features using convolutional layers. The proposed MotionCapture (MoCap) module generates motion features using the frame-wise appearance features, and combines the motion features into the next downstream layer.
-    papers:
-      -
-        title: 'MotionCapture: Neural Motion Feature Learning for Video Understanding'
-        writer:
-          - 'Heeseung Kwon'
-          - 'Manjin Kim'
-          - 'Suha Kwak'
-          - 'Minsu Cho'
-        links:
-          - - 'arXiv, 2019'
-            - 'www.google.com'
-          - - 'Bibtex, 2019'
+    paper:
+      title: 'MotionCapture: Neural Motion Feature Learning for Video Understanding'
+      writer:
+        - 'Heeseung Kwon'
+        - 'Manjin Kim'
+        - 'Suha Kwak'
+        - 'Minsu Cho'
+      links:
+        - - 'arXiv, 2019'
+          - 'www.google.com'
+        - - 'Bibtex, 2019'
   -
     title: 'SPair-71k: A Large-scale Benchmark for Semantic Correspondence'
     thumbnail: 'http://cvlab.postech.ac.kr/research/SPair-71k/images/SPair_teaser.png'
@@ -71,15 +70,14 @@ research:
       - 'Jean Ponce'
     abstract: 'Establishing visual correspondences under large intra-class variations, which is often referred to as semantic correspondence or semantic matching, remains a challenging problem in computer vision. Despite its significance, however, most of the datasets for semantic correspondence are limited to a small amount of image pairs with similar viewpoints and scales. In this paper, we present a new large-scale benchmark dataset of semantically paired images, SPair-71k, which contains 70,958 image pairs with diverse variations in viewpoint and scale. Compared to previous datasets, it is significantly larger in number and contains more accurate and richer annotations. We believe this dataset will provide a reliable testbed to study the problem of semantic correspondence and will help to advance research in this area. We provide the results of recent methods on our new dataset as baselines for further research.'
     sdsdf: 'testest'
-    papers:
-      -
-        title: 'Hyperpixel Flow: Semantic Correspondence with Multi-layer Neural Features'
-        writer:
-          - 'Juhong Min'
-          - 'Jongmin Lee'
-          - 'Jean Ponce'
-        links:
-          - - 'arXiv'
+    paper:
+      title: 'Hyperpixel Flow: Semantic Correspondence with Multi-layer Neural Features'
+      writer:
+        - 'Juhong Min'
+        - 'Jongmin Lee'
+        - 'Jean Ponce'
+      links:
+        - - 'arXiv'
   -
     title: 'Hyperpixel Flow: Semantic Correspondence with Multi-layer Neural Features'
     thumbnail: 'http://cvlab.postech.ac.kr/research/HPF/images/architecture.png'
@@ -89,17 +87,16 @@ research:
       - 'Jean Ponce'
     abs: 'testtest'
     sdsdf: 'testest'
-    papers:
-      -
-        title: 'paper title 1'
-        writer:
-          - 'writer1'
-          - 'writer 2'
-        links:
-          - - 'arXiv'
-            - 'www.google.com'
-          - - 'Bibtex'
-            - 'www.naver.com'
+    paper:
+      title: 'paper title 1'
+      writer:
+        - 'writer1'
+        - 'writer 2'
+      links:
+        - - 'arXiv'
+          - 'www.google.com'
+        - - 'Bibtex'
+          - 'www.naver.com'
   -
     title: 'Relational Knowledge Distillation'
     thumbnail: 'http://cvlab.postech.ac.kr/research/RKD/images/rkd.png'
@@ -108,17 +105,16 @@ research:
       - 'Dongju Kim'
     abs: 'testtest'
     sdsdf: 'testest'
-    papers:
-      -
-        title: 'paper title 1'
-        writer:
-          - 'writer1'
-          - 'writer 2'
-        links:
-          - - 'arXiv'
-            - 'www.google.com'
-          - - 'Bibtex'
-            - 'www.naver.com'
+    paper:
+      title: 'paper title 1'
+      writer:
+        - 'writer1'
+        - 'writer 2'
+      links:
+        - - 'arXiv'
+          - 'www.google.com'
+        - - 'Bibtex'
+          - 'www.naver.com'
 
 course:
   -
