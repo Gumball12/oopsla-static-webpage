@@ -77,7 +77,7 @@ export default {
   methods: {
     getMainNewsHeight() {
       const headerHeight = document.querySelector('div.header-nav').offsetHeight;
-      return window.innerHeight - headerHeight - 24; // padding: 12 * 2
+      return window.innerHeight - headerHeight - 24 - 200; // padding: 12 * 2 + 200
     },
   },
   async mounted() {
